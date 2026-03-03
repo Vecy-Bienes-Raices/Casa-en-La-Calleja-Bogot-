@@ -8,7 +8,7 @@ const propertyConfig = {
     title: "Casa Remodelada en Venta - Polo Club, Bogotá | 204m²",
     description: "Excelente oportunidad. Casa de 204.79 m² en el barrio Polo Club, Bogotá. 5 habitaciones, 4 baños, 3 parqueaderos, patio automatizado y seguridad.",
     keywords: "Casa en Venta, Polo Club, Bogotá, Barrios Unidos, Casa Remodelada, Bienes Raíces",
-    ogUrl: "https://vecy-bienes-raices.github.io/Casa-Polo-Club-Bogot-/",
+    ogUrl: "https://casa-polo-club-bogota.netlify.app/",
     ogImage: "assets/1.jpg",
     author: "Vecy Bienes Raíces", 
     copyright: "2026"
@@ -106,6 +106,6 @@ const propertyConfig = {
 ✨ *Destacado:* Completamente remodelada, patio cubierto automatizado, chimenea, circuito cerrado de cámaras.
 
 🔗 *Ver Fotos y Detalles:*
-https://vecy-bienes-raices.github.io/Casa-Polo-Club-Bogot-/`
+https://casa-polo-club-bogota.netlify.app/`
   }
 };
