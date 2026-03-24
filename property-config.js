@@ -12,7 +12,7 @@ const propertyConfig = {
     ogImage: "assets/14.jpg", 
     author: "Vecy Bienes Raíces", 
     copyright: "2026",
-    propertyId: "VECY-CAL-01"
+    propertyId: "ID-BOG-LC01"
   },
   
   // 2. Encabezado Principal
