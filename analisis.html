@@ -17,7 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Librería para el PDF -->
+    <!-- Configuración y Librería para el PDF -->
+    <script src="property-config.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <style>
@@ -90,7 +91,7 @@
 
     <div class="glass-card" id="content-to-export">
       <h1>Detalles de la Propiedad</h1>
-      <p style="text-align: center; font-weight: bold; color: #666; margin-bottom: 30px;">CASA CHALET EN VENTA - LA CALLEJA, BOGOTÁ</p>
+      <p style="text-align: center; font-weight: bold; color: #666; margin-bottom: 30px;">CASA CHALET EN VENTA - LA CALLEJA, BOGOTÁ <br> <span id="web-ref" style="color: #d4af37; font-size: 0.9em;"></span></p>
 
       <h2>1. Ficha Técnica y Dimensiones</h2>
       <ul>
@@ -161,7 +162,7 @@
             <div class="pdf-logo">INMUEBLE EN VENTA</div>
             <div style="text-align: right;">
                 <div style="font-weight: 700; color: #d4af37;">FICHA TÉCNICA PROFESIONAL</div>
-                <div style="font-size: 12px;">Ref: CALLEJA-BOG-2026</div>
+                <div style="font-size: 12px;">Ref: <span id="pdf-ref"></span></div>
             </div>
         </div>
 
@@ -240,13 +241,17 @@
     </div>
 
     <script>
+      // Inyectar REF dinámico de forma oficial
+      document.getElementById('web-ref').innerText = 'REF: ' + propertyConfig.seo.propertyId;
+      document.getElementById('pdf-ref').innerText = propertyConfig.seo.propertyId;
+
       function downloadPDF() {
         const element = document.getElementById('pdf-template');
         element.style.display = 'block'; 
 
         const opt = {
           margin: [10, 10],
-          filename: 'Ficha_Tecnica_Inmueble_La_Calleja.pdf',
+          filename: 'Ficha_Tecnica_' + propertyConfig.seo.propertyId + '.pdf',
           image: { type: 'jpeg', quality: 0.98 },
           html2canvas: { scale: 2, useCORS: true },
           jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }

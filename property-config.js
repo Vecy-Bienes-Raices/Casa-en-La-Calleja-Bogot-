@@ -11,7 +11,8 @@ const propertyConfig = {
     ogUrl: "https://casa-la-calleja-bogota.netlify.app/", 
     ogImage: "assets/14.jpg", 
     author: "Vecy Bienes Raíces", 
-    copyright: "2026"
+    copyright: "2026",
+    propertyId: "CAL-2026"
   },
   
   // 2. Encabezado Principal
