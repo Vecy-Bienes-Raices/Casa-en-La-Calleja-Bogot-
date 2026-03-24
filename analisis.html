@@ -98,6 +98,7 @@
       }
       .btn-back { background: linear-gradient(90deg, #3e2723 0%, #5d4037 100%); color: white; }
       .btn-pdf { background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%); color: white; }
+      #pdf-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
       .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
 
       /* Elementos específicos para el PDF (Ocultos en web) */
@@ -120,7 +121,22 @@
     </div>
     <div class="nav-buttons">
       <a href="index.html" class="btn btn-back">⬅ Volver a la Ficha</a>
-      <button onclick="downloadPDF()" class="btn btn-pdf">📄 DESCARGAR PDF</button>
+      <button onclick="downloadPDF()" id="pdf-btn" style="
+        background: linear-gradient(135deg, #d4af37, #b8860b);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: transform 0.2s;
+      ">
+        📄 DESCARGAR PDF
+      </button>
     </div>
 
     <div class="glass-card" id="content-to-export">
