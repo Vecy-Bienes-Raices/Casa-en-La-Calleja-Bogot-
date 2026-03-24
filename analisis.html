@@ -142,69 +142,118 @@
       </ul>
     </div>
 
-    <!-- Template oculto para el PDF con fotos -->
+    <!-- Template oculto para el PDF (VERSIÓN NEUTRA Y COMPLETA) -->
     <div id="pdf-template">
-        <div style="padding: 40px; font-family: Arial, sans-serif; color: #333;">
-            <div style="text-align: center; border-bottom: 2px solid #d4af37; padding-bottom: 20px; margin-bottom: 30px;">
-                <h1 style="color: #3e2723; margin: 0; font-size: 24px;">FICHA TÉCNICA - CASA LA CALLEJA</h1>
-                <p style="font-size: 18px; color: #b8860b; margin-top: 5px;">Precio: $890.000.000 COP</p>
-            </div>
+        <style>
+          #pdf-template { background: white; padding: 40px; color: #333; font-family: 'Outfit', sans-serif; display: none; }
+          .pdf-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #d4af37; padding-bottom: 20px; margin-bottom: 30px; }
+          .pdf-logo { font-size: 24px; font-weight: 800; color: #3e2723; }
+          .pdf-section { margin-bottom: 25px; }
+          .pdf-section h2 { font-size: 18px; color: #8b7355; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+          .pdf-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 10px; }
+          .pdf-item { font-size: 14px; margin-bottom: 5px; }
+          .pdf-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
+          .pdf-gallery img { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; }
+          .pdf-footer { margin-top: 40px; text-align: center; font-size: 12px; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
+        </style>
 
-            <div style="display: flex; gap: 20px; margin-bottom: 30px;">
-                <div style="flex: 1;">
-                    <h2 style="font-size: 16px; color: #3e2723; border-bottom: 1px solid #eee;">Detalles Clave</h2>
-                    <ul style="list-size: none; padding: 0; font-size: 13px;">
-                        <li><strong>Área Total:</strong> 239.03 m²</li>
-                        <li><strong>Habitaciones:</strong> 3</li>
-                        <li><strong>Baños:</strong> 3</li>
-                        <li><strong>Parqueaderos:</strong> 2</li>
-                        <li><strong>Pisos:</strong> 3</li>
-                    </ul>
-                </div>
-                <div style="flex: 2;">
-                    <img src="assets/1.jpg" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                </div>
+        <div class="pdf-header">
+            <div class="pdf-logo">INMUEBLE EN VENTA</div>
+            <div style="text-align: right;">
+                <div style="font-weight: 700; color: #d4af37;">FICHA TÉCNICA PROFESIONAL</div>
+                <div style="font-size: 12px;">Ref: CALLEJA-BOG-2026</div>
             </div>
+        </div>
 
-            <h2 style="font-size: 16px; color: #3e2723; background: #f9f9f9; padding: 5px 10px; border-left: 4px solid #d4af37;">Características Destacadas</h2>
-            <p style="font-size: 13px; margin: 10px 0;">Casa chalet remodelada con 2 terrazas, BBQ, 2 estudios y excelente ubicación en conjunto cerrado de 25 casas con seguridad 24/7.</p>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h1 style="color: #3e2723; margin: 0; font-size: 24px;">CASA CHALET REMODELADA - LA CALLEJA</h1>
+            <p style="font-size: 1.4em; color: #b8860b; font-weight: 700;">Precio de Venta: $890.000.000 COP</p>
+        </div>
 
-            <h2 style="font-size: 16px; color: #3e2723; margin-top: 20px;">Galería de Imágenes Seleccionadas</h2>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px;">
-                <img src="assets/3.jpg" style="width: 100%; height: 100px; object-fit: cover; border-radius: 5px;">
-                <img src="assets/5.jpg" style="width: 100%; height: 100px; object-fit: cover; border-radius: 5px;">
-                <img src="assets/8.jpg" style="width: 100%; height: 100px; object-fit: cover; border-radius: 5px;">
-                <img src="assets/12.jpg" style="width: 100%; height: 100px; object-fit: cover; border-radius: 5px;">
-                <img src="assets/18.jpg" style="width: 100%; height: 100px; object-fit: cover; border-radius: 5px;">
-                <img src="assets/26.jpg" style="width: 100%; height: 100px; object-fit: cover; border-radius: 5px;">
-                <img src="assets/30.jpg" style="width: 100%; height: 100px; object-fit: cover; border-radius: 5px;">
-                <img src="assets/40.jpg" style="width: 100%; height: 100px; object-fit: cover; border-radius: 5px;">
-                <img src="assets/44.jpg" style="width: 100%; height: 100px; object-fit: cover; border-radius: 5px;">
+        <div class="pdf-grid">
+            <div class="pdf-section">
+                <h2 style="border-bottom: 2px solid #d4af37; color: #3e2723;">Resumen de Áreas</h2>
+                <div class="pdf-item"><strong>• Área Total:</strong> 239,03 m²</div>
+                <div class="pdf-item"><strong>• Área Construida:</strong> 150,38 m²</div>
+                <div class="pdf-item"><strong>• Área Libre:</strong> 88,65 m²</div>
+                <div class="pdf-item"><strong>• Habitaciones:</strong> 3 Amplias</div>
+                <div class="pdf-item"><strong>• Baños:</strong> 3 Espaciosos</div>
+                <div class="pdf-item"><strong>• Parqueaderos:</strong> 2 Espacios</div>
+                <div class="pdf-item"><strong>• Niveles:</strong> 3 Niveles</div>
             </div>
-
-            <div style="margin-top: 40px; text-align: center; font-size: 12px; color: #777; border-top: 1px solid #eee; padding-top: 20px;">
-                <p>Contacto: Vecy Bienes Raíces | www.vecibienesraices.com</p>
-                <p>Generado comercialmente para información de clientes.</p>
+            <div>
+                <img src="assets/14.jpg" style="width: 100%; border-radius: 12px; border: 1px solid #ddd; height: 180px; object-fit: cover;">
             </div>
+        </div>
+
+        <div class="pdf-grid" style="margin-top: 0;">
+            <div class="pdf-section">
+                <h2>Distribución y Espacios</h2>
+                <div class="pdf-item">• Sala y Comedor independientes.</div>
+                <div class="pdf-item">• 2 Estudios (Home Office).</div>
+                <div class="pdf-item">• Cocina integral moderna.</div>
+                <div class="pdf-item">• 2 Terrazas privadas.</div>
+                <div class="pdf-item">• Zona BBQ para reuniones.</div>
+                <div class="pdf-item">• Zona de lavandería independiente.</div>
+            </div>
+            <div class="pdf-section">
+                <h2>Infraestructura y Acabados</h2>
+                <div class="pdf-item">• Remodelación integral (hace 11 años).</div>
+                <div class="pdf-item">• Tuberías y acometidas actualizadas.</div>
+                <div class="pdf-item">• Chimenea tradicional acogedora.</div>
+                <div class="pdf-item">• Cornisa desplegable en terraza.</div>
+                <div class="pdf-item">• Closets renovados.</div>
+            </div>
+        </div>
+
+        <div class="pdf-grid" style="margin-top: 0;">
+            <div class="pdf-section">
+                <h2>Seguridad y Conjunto</h2>
+                <div class="pdf-item">• Conjunto cerrado de 25 casas.</div>
+                <div class="pdf-item">• Vigilancia privada 24/7.</div>
+                <div class="pdf-item">• Portería y control de acceso.</div>
+                <div class="pdf-item">• Entorno seguro y residencial.</div>
+            </div>
+            <div class="pdf-section">
+                <h2>Ubicación Privilegiada</h2>
+                <div class="pdf-item">• Barrio La Calleja, Usaquén.</div>
+                <div class="pdf-item">• A una cuadra de la Av. Carrera 19.</div>
+                <div class="pdf-item">• A tres cuadras de Autopista Norte.</div>
+                <div class="pdf-item">• Cerca al Country Club y C.C.</div>
+            </div>
+        </div>
+
+        <div class="pdf-section" style="page-break-before: always; margin-top: 40px;">
+            <h2>Registro Fotográfico Seleccionado</h2>
+            <div class="pdf-gallery">
+                <img src="assets/1.jpg" /><img src="assets/3.jpg" /><img src="assets/5.jpg" />
+                <img src="assets/8.jpg" /><img src="assets/12.jpg" /><img src="assets/18.jpg" />
+                <img src="assets/26.jpg" /><img src="assets/30.jpg" /><img src="assets/40.jpg" />
+                <img src="assets/44.jpg" /><img src="assets/47.jpg" /><img src="assets/14.jpg" />
+            </div>
+        </div>
+
+        <div class="pdf-footer">
+            <p>Esta ficha técnica es exclusivamente para uso informativo y comercial.</p>
+            <p>Información sugerida para aliados inmobiliarios.</p>
         </div>
     </div>
 
     <script>
       function downloadPDF() {
         const element = document.getElementById('pdf-template');
-        element.style.display = 'block'; // Mostrar temporalmente para capturar
+        element.style.display = 'block'; 
 
         const opt = {
-          margin:       0.5,
-          filename:     'Ficha_Inmueble_La_Calleja.pdf',
-          image:        { type: 'jpeg', quality: 0.98 },
-          html2canvas:  { scale: 2, useCORS: true },
-          jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+          margin: [10, 10],
+          filename: 'Ficha_Tecnica_Inmueble_La_Calleja.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
 
-        // Ejecutar la generación
         html2pdf().set(opt).from(element).save().then(() => {
-            element.style.display = 'none'; // Ocultar de nuevo
+            element.style.display = 'none'; 
         });
       }
     </script>
