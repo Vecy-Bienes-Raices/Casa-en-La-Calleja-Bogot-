@@ -9,7 +9,7 @@ const propertyConfig = {
     description: "Oportunidad única en La Calleja. Casa chalet de 239m² con 3 habitaciones, 3 baños, estudio, terrazas y remodelación integral. Venta o Permuta.",
     keywords: "Casa en Venta, La Calleja, Usaquén, Bogotá, Casa Chalet, Permuta Inmueble, Bienes Raíces",
     ogUrl: "https://casa-la-calleja-bogota.netlify.app/", 
-    ogImage: "assets/1.jpg", 
+    ogImage: "assets/14.jpg", 
     author: "Vecy Bienes Raíces", 
     copyright: "2026"
   },
@@ -79,7 +79,7 @@ const propertyConfig = {
   // 8. Multimedia
   multimedia: {
     videoUrl: "assets/Casa-La-Calleja.mp4", 
-    videoThumbnail: "assets/1.jpg", 
+    videoThumbnail: "assets/14.jpg", 
     imagesCount: 47, 
     imagePrefix: "assets/",
     imageExtension: ".jpg",

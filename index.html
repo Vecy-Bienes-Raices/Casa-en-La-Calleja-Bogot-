@@ -16,7 +16,7 @@
     <meta property="og:title" content="Casa Chalet en La Calleja, Usaquén | Oportunidad de Inversión 🏡" />
     <meta property="og:description" content="Oportunidad única en La Calleja. Casa chalet de 239m² con 3 habitaciones, 3 baños, estudio, terrazas y remodelación integral. Venta o Permuta." />
     <!-- IMPORTANTE: WhatsApp requiere URL absoluta para la imagen -->
-    <meta property="og:image" content="https://casa-la-calleja-bogota.netlify.app/assets/1.jpg" />
+    <meta property="og:image" content="https://casa-la-calleja-bogota.netlify.app/assets/14.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://casa-la-calleja-bogota.netlify.app/" />
@@ -295,10 +295,17 @@
         font-weight: 700;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
       }
+      .video-wrapper {
+        position: relative;
+        z-index: 100;
+        cursor: auto;
+      }
       .video-wrapper video {
         width: 100%;
         border-radius: 15px;
         display: block;
+        position: relative;
+        z-index: 101;
       }
       .slider-container {
         position: relative;
@@ -913,6 +920,10 @@
                 if (propertyConfig.multimedia.videoThumbnail) {
                     videoTag.poster = propertyConfig.multimedia.videoThumbnail;
                 }
+                // Evitar que los clics en el video abran el lightbox
+                videoTag.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                });
                 videoWrapper.appendChild(videoTag);
             } else {
                 // Asumimos Embed/YouTube
@@ -921,6 +932,8 @@
                 iframe.width = "100%";
                 iframe.height = "100%"; // Ajustar con CSS
                 iframe.style.minHeight = "400px";
+                iframe.style.position = "relative";
+                iframe.style.zIndex = "102";
                 iframe.frameBorder = "0";
                 iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
                 iframe.allowFullscreen = true;
